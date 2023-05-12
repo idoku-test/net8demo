@@ -14,7 +14,7 @@
     <PackageReference Include="Bogus" Version="34.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <EmbeddedResource Include="Resources\favicon.ico" />
-      <EmbeddedResource Include="Resources\res.json" />
+    <EmbeddedResource Include="Resources\res.json" />
      <Content Include="Resources\*.*">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
    </Content>
