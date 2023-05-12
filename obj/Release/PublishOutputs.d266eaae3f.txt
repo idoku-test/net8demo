@@ -1,0 +1,6 @@
+D:\code\demo\net8demo\.artifacts\publish\release\net8demo.exe
+D:\code\demo\net8demo\.artifacts\publish\release\net8demo.dll
+D:\code\demo\net8demo\.artifacts\publish\release\net8demo.deps.json
+D:\code\demo\net8demo\.artifacts\publish\release\net8demo.runtimeconfig.json
+D:\code\demo\net8demo\.artifacts\publish\release\net8demo.pdb
+D:\code\demo\net8demo\.artifacts\publish\release\Newtonsoft.Json.dll

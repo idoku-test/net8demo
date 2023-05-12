@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>IndexOfAnyBenchmark-20230509-102541</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19045.2846/22H2/2022Update)
+Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
+.NET SDK=8.0.100-preview.3.23178.7
+  [Host]     : .NET 8.0.0 (8.0.23.17408), X64 RyuJIT AVX2
+  DefaultJob : .NET 8.0.0 (8.0.23.17408), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Max</th><th>Mean</th><th>Error</th><th>StdDev</th>
+</tr>
+</thead><tbody><tr><td>Old</td><td>10</td><td>10.395 ns</td><td>0.2454 ns</td><td>0.6021 ns</td>
+</tr><tr><td>New</td><td>10</td><td>5.787 ns</td><td>0.0979 ns</td><td>0.0818 ns</td>
+</tr><tr><td>Old</td><td>20</td><td>10.585 ns</td><td>0.2454 ns</td><td>0.1916 ns</td>
+</tr><tr><td>New</td><td>20</td><td>6.005 ns</td><td>0.1092 ns</td><td>0.1021 ns</td>
+</tr></tbody></table>
+</body>
+</html>

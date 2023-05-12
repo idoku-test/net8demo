@@ -1,0 +1,15 @@
+D:\code\demo\net8demo\bin\Debug\net8.0\net8demo.exe
+D:\code\demo\net8demo\bin\Debug\net8.0\net8demo.deps.json
+D:\code\demo\net8demo\bin\Debug\net8.0\net8demo.runtimeconfig.json
+D:\code\demo\net8demo\bin\Debug\net8.0\net8demo.dll
+D:\code\demo\net8demo\bin\Debug\net8.0\net8demo.pdb
+D:\code\demo\net8demo\obj\Debug\net8.0\net8demo.csproj.AssemblyReference.cache
+D:\code\demo\net8demo\obj\Debug\net8.0\net8demo.GeneratedMSBuildEditorConfig.editorconfig
+D:\code\demo\net8demo\obj\Debug\net8.0\net8demo.AssemblyInfoInputs.cache
+D:\code\demo\net8demo\obj\Debug\net8.0\net8demo.AssemblyInfo.cs
+D:\code\demo\net8demo\obj\Debug\net8.0\net8demo.csproj.CoreCompileInputs.cache
+D:\code\demo\net8demo\obj\Debug\net8.0\net8demo.dll
+D:\code\demo\net8demo\obj\Debug\net8.0\refint\net8demo.dll
+D:\code\demo\net8demo\obj\Debug\net8.0\net8demo.pdb
+D:\code\demo\net8demo\obj\Debug\net8.0\net8demo.genruntimeconfig.cache
+D:\code\demo\net8demo\obj\Debug\net8.0\ref\net8demo.dll

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>CompositeBenchmark-20230510-164030</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19045.2846/22H2/2022Update)
+Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
+.NET SDK=8.0.100-preview.3.23178.7
+  [Host]     : .NET 8.0.0 (8.0.23.17408), X64 RyuJIT AVX2
+  DefaultJob : .NET 8.0.0 (8.0.23.17408), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Max</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>CFParse</td><td>10</td><td>91.44 ns</td><td>2.916 ns</td><td>8.368 ns</td><td>89.27 ns</td>
+</tr><tr><td>StrParse</td><td>10</td><td>140.64 ns</td><td>5.928 ns</td><td>16.425 ns</td><td>138.90 ns</td>
+</tr><tr><td>CFParse</td><td>100</td><td>904.11 ns</td><td>23.082 ns</td><td>67.696 ns</td><td>875.03 ns</td>
+</tr><tr><td>StrParse</td><td>100</td><td>1,042.19 ns</td><td>17.939 ns</td><td>22.030 ns</td><td>1,033.46 ns</td>
+</tr></tbody></table>
+</body>
+</html>

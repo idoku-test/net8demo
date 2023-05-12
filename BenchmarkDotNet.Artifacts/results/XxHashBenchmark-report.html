@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>XxHashBenchmark-20230511-110527</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19045.2846/22H2/2022Update)
+Intel Core i7-7700HQ CPU 2.80GHz (Kaby Lake), 1 CPU, 8 logical and 4 physical cores
+.NET SDK=8.0.100-preview.3.23178.7
+  [Host]     : .NET 8.0.0 (8.0.23.17408), X64 RyuJIT AVX2
+  DefaultJob : .NET 8.0.0 (8.0.23.17408), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method</th><th>Max</th><th> Mean</th><th>Error</th><th>StdDev</th><th>Median</th>
+</tr>
+</thead><tbody><tr><td>XxHashTest</td><td>100</td><td>254.1 ns</td><td>4.19 ns</td><td>5.88 ns</td><td>252.2 ns</td>
+</tr><tr><td>Sha1Test</td><td>100</td><td>1,622.9 ns</td><td>17.02 ns</td><td>15.08 ns</td><td>1,621.9 ns</td>
+</tr><tr><td>Sha256Test</td><td>100</td><td>2,559.3 ns</td><td>49.33 ns</td><td>46.14 ns</td><td>2,549.8 ns</td>
+</tr><tr><td>XxHashTest</td><td>1000</td><td>288.5 ns</td><td>5.82 ns</td><td>14.28 ns</td><td>285.4 ns</td>
+</tr><tr><td>Sha1Test</td><td>1000</td><td>3,249.4 ns</td><td>40.71 ns</td><td>36.09 ns</td><td>3,251.0 ns</td>
+</tr><tr><td>Sha256Test</td><td>1000</td><td>7,109.3 ns</td><td>115.56 ns</td><td>96.50 ns</td><td>7,099.9 ns</td>
+</tr><tr><td>XxHashTest</td><td>10000</td><td>817.9 ns</td><td>16.39 ns</td><td>19.51 ns</td><td>815.1 ns</td>
+</tr><tr><td>Sha1Test</td><td>10000</td><td>20,510.6 ns</td><td>407.21 ns</td><td>951.84 ns</td><td>20,053.2 ns</td>
+</tr><tr><td>Sha256Test</td><td>10000</td><td>50,978.6 ns</td><td>1,011.45 ns</td><td>1,899.75 ns</td><td>50,462.5 ns</td>
+</tr></tbody></table>
+</body>
+</html>
