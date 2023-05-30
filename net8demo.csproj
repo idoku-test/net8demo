@@ -6,12 +6,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <UseArtifactsOutput>true</UseArtifactsOutput>
-   
+     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+   <EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>
+        true
+    </EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" Version="0.13.5" />
     <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.0-preview.4.23259.5" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.0-preview.4.23259.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <EmbeddedResource Include="Resources\favicon.ico" />
     <EmbeddedResource Include="Resources\res.json" />

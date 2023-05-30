@@ -94,3 +94,6 @@ D:\code\demo\net8demo\.artifacts\bin\debug\runtimes\win-arm64\native\capstone.dl
 D:\code\demo\net8demo\.artifacts\bin\debug\runtimes\win-x64\native\capstone.dll
 D:\code\demo\net8demo\.artifacts\bin\debug\runtimes\win-x86\native\capstone.dll
 D:\code\demo\net8demo\.artifacts\bin\debug\runtimes\win\lib\net6.0\System.Management.dll
+D:\code\demo\net8demo\.artifacts\bin\debug\Resources\favicon.ico
+D:\code\demo\net8demo\.artifacts\bin\debug\Resources\res.json
+D:\code\demo\net8demo\.artifacts\bin\debug\System.IO.Hashing.dll

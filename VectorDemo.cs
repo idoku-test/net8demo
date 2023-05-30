@@ -1,37 +1,75 @@
 
 using System;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Runtime.Intrinsics;
 using System.Runtime.Intrinsics.X86;
 using BenchmarkDotNet.Attributes;
 
-class VectorBenchmark
+public class VectorBenchmark
 { 
-        private const uint Vector256ByteCount = 32;
-        private const int BitsPerInt32 = 32;
-        private int[] m_array = Enumerable.Range(0, 512).ToArray();
-        private bool[] boolArray = new bool[512 * 32];
-        private int m_length = 512;
-
-        [Benchmark]
-        public void Vector256ShuffleConst()
-        {
-            Vector256<byte> bitMask = Vector256.Create(0x80402010_08040201).AsByte();
-            Vector256<byte> ones = Vector256.Create((byte)1);
-
-            ref byte destination = ref Unsafe.As<bool, byte>(ref MemoryMarshal.GetArrayDataReference<bool>(boolArray));
-
-            for (uint i = 0; (i + Vector256ByteCount) <= (uint)m_length; i += Vector256ByteCount)
-            {
-                int bits = m_array[i / (uint)BitsPerInt32];
-                Vector256<int> scalar = Vector256.Create(bits);
-                Vector256<byte> shuffled = Vector256.Shuffle(scalar.AsByte(), Vector256.Create(0, 0x01010101_01010101, 0x02020202_02020202, 0x03030303_03030303).AsByte());
-
-                Vector256<byte> extracted = shuffled & bitMask;
-                Vector256<byte> normalized = Vector256.Min(extracted, ones);
-                normalized.StoreUnsafe(ref destination, new UIntPtr(i));
-            }
-        }
     
+     private int[] arrayData;
+    private List<int> listData;
+    private Vector<int> vectorData;
+    private const int DataSize = 10000;
+    
+     [GlobalSetup]
+    public void Setup()
+    {
+        arrayData = new int[DataSize];
+        listData = new List<int>(DataSize);
+        vectorData = new Vector<int>(arrayData);
+        
+        var random = new Random();
+        for (int i = 0; i < DataSize; i++)
+        {
+            int value = random.Next();
+            arrayData[i] = value;
+            listData.Add(value);
+        }
+    }
+
+     [Benchmark]
+    public void ArraySum()
+    {
+        int sum = 0;
+        for (int i = 0; i < arrayData.Length; i++)
+        {
+            sum += arrayData[i];
+        }
+    }
+
+
+          [Benchmark]
+    public void ListSum()
+    {
+        int sum = 0;
+        for (int i = 0; i < listData.Count; i++)
+        {
+            sum += listData[i];
+        }
+    } 
+    
+      [Benchmark]
+    public void VectorSum()
+    {
+        int sum = 0;
+        int simdLength = Vector<int>.Count;
+        int i = 0;
+
+        for (; i <= arrayData.Length - simdLength; i += simdLength)
+        {
+            var vector = new Vector<int>(arrayData, i);
+            sum += Vector.Dot(vector, Vector<int>.One);
+        }
+
+        // Handle remaining elements
+        for (; i < arrayData.Length; i++)
+        {
+            sum += arrayData[i];
+        }
+    }
 }
+

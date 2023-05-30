@@ -10,7 +10,8 @@
         "dependencies": {
           "BenchmarkDotNet": "0.13.5",
           "Bogus": "34.0.2",
-          "Newtonsoft.Json": "13.0.3"
+          "Newtonsoft.Json": "13.0.3",
+          "System.IO.Hashing": "8.0.0-preview.3.23174.8"
         },
         "runtime": {
           "net8demo.dll": {}
@@ -418,6 +419,14 @@
         }
       },
       "System.Collections.Immutable/5.0.0": {},
+      "System.IO.Hashing/8.0.0-preview.3.23174.8": {
+        "runtime": {
+          "lib/net8.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.23.17408"
+          }
+        }
+      },
       "System.Management/6.0.0": {
         "dependencies": {
           "System.CodeDom": "6.0.0"
@@ -643,6 +652,13 @@
       "sha512": "sha512-FXkLXiK0sVVewcso0imKQoOxjoPAj42R8HtjjbSjVPAzwDfzoyoznWxgA3c38LDbN9SJux1xXoXYAhz98j7r2g==",
       "path": "system.collections.immutable/5.0.0",
       "hashPath": "system.collections.immutable.5.0.0.nupkg.sha512"
+    },
+    "System.IO.Hashing/8.0.0-preview.3.23174.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zWgmj+UwMnv+f1n5liDCowEVVLbitNAUZbsb4wbnTJzssyrB25yK+SG2zKN0tFgL1ZcxOb9uRxCHwv4/wZ2j4A==",
+      "path": "system.io.hashing/8.0.0-preview.3.23174.8",
+      "hashPath": "system.io.hashing.8.0.0-preview.3.23174.8.nupkg.sha512"
     },
     "System.Management/6.0.0": {
       "type": "package",
